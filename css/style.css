@@ -579,3 +579,33 @@ Animations
     transform:translateY(0);
 
 }
+/* ================= Technical Tools ================= */
+
+.tools {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.tools h2 {
+    margin-bottom: 40px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.tool-card {
+    background: #1b1b1b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #00e5ff;
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #00e5ff;
+}
