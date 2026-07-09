@@ -21,6 +21,8 @@ ul {
     list-style: none;
 }
 
+/* ================= NAVBAR ================= */
+
 .navbar {
     width: 100%;
     height: 80px;
@@ -31,7 +33,7 @@ ul {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(11, 17, 32, .95);
+    background: rgba(11,17,32,.95);
     backdrop-filter: blur(10px);
     z-index: 999;
 }
@@ -42,25 +44,24 @@ ul {
 }
 
 .nav-links a {
-    color: white;
+    color: #fff;
     transition: .3s;
 }
 
-.nav-links a:hover {
-    color: #8b5cf6;
-}
-
+.nav-links a:hover,
 .active {
     color: #8b5cf6;
 }
+
+/* ================= HERO ================= */
 
 .hero {
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 120px 8%;
     gap: 60px;
+    padding: 120px 8%;
 }
 
 .hero-content {
@@ -69,8 +70,8 @@ ul {
 
 .hero-content h3 {
     color: #8b5cf6;
-    margin-bottom: 15px;
     font-size: 22px;
+    margin-bottom: 15px;
 }
 
 .hero-content h1 {
@@ -80,24 +81,25 @@ ul {
 
 .hero-content h2 {
     color: #d1d5db;
-    margin-bottom: 25px;
     font-size: 26px;
+    margin-bottom: 25px;
 }
 
 .hero-content p {
     color: #b8bcc8;
     line-height: 1.9;
-    margin-bottom: 40px;
     max-width: 650px;
+    margin-bottom: 40px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
 }
+
 .btn {
     background: #8b5cf6;
-    color: white;
+    color: #fff;
     padding: 15px 35px;
     border-radius: 10px;
     transition: .3s;
@@ -117,8 +119,10 @@ ul {
 
 .btn-outline:hover {
     background: #8b5cf6;
-    color: white;
+    color: #fff;
 }
+
+/* ================= SECTIONS ================= */
 
 section {
     padding: 100px 8%;
@@ -138,6 +142,7 @@ section h2 {
     color: #cbd5e1;
     font-size: 18px;
 }
+/* ================= CERTIFICATES ================= */
 
 .certificate-grid {
     display: grid;
@@ -156,6 +161,8 @@ section h2 {
     transform: scale(1.05);
 }
 
+/* ================= SKILLS ================= */
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -167,7 +174,7 @@ section h2 {
     padding: 30px;
     text-align: center;
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255,255,255,.08);
     transition: .3s;
 }
 
@@ -175,6 +182,85 @@ section h2 {
     transform: translateY(-10px);
     background: #8b5cf6;
 }
+
+/* ================= PROJECTS ================= */
+
+.projects {
+    padding: 150px 8% 100px;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 60px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    gap: 35px;
+}
+
+.project-card {
+    background: #172036;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 30px;
+}
+
+.project-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.project-info p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tech span {
+    background: #8b5cf6;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.project-buttons a {
+    flex: 1;
+    text-align: center;
+}
+/* ================= FOOTER ================= */
+
 footer {
     background: #08101f;
     text-align: center;
@@ -200,7 +286,7 @@ footer h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     font-size: 22px;
     transition: .3s;
 }
@@ -214,100 +300,8 @@ footer p {
     color: #9ca3af;
 }
 
-@media (max-width:900px) {
+/* ================= ANIMATION ================= */
 
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-content h1 {
-        font-size: 45px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-    }
-
-    .nav-links {
-        margin-top: 20px;
-    }
-}
-
-.projects {
-    padding: 150px 8% 100px;
-}
-
-.projects h2 {
-    text-align: center;
-    font-size: 45px;
-    margin-bottom: 60px;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 40px;
-}
-
-.project-card {
-    background: #172036;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: .4s;
-    border: 1px solid rgba(255, 255, 255, .08);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
-}
-
-.project-card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 30px;
-}
-
-.project-info h3 {
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-.project-info p {
-    color: #cbd5e1;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
-.tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.tech span {
-    background: #8b5cf6;
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-size: 14px;
-}
-
-.project-buttons {
-    display: flex;
-    gap: 15px;
-}
 .hidden {
     opacity: 0;
     transform: translateY(60px);
@@ -317,4 +311,89 @@ footer p {
 .show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 120px 8% 80px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content h2 {
+        font-size: 22px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .projects-grid,
+    .skills-grid,
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-info h3 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 80px 6%;
+    }
+}
+.project-card{
+    background:#172036;
+    border-radius:24px;
+    padding:18px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+}
+
+.project-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:16px;
+    transition:.35s ease;
+}
+
+.project-card:hover img{
+    transform:scale(1.03);
+}
+
+.project-info{
+    padding:20px 8px 8px;
+}
+.risk-img{
+    width: 100%;
+    height: auto !important;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+    border-radius: 18px;
 }
